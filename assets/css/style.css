@@ -1,9 +1,13 @@
 h1 {
+    /* For name in upper left */
+}
+
+h2 {
     /* make it inline? So content is always to the right? */
     /* Add rule line on right side */
 }
 
-h2 {
+h3 {
     /* In blocks within cards */
 }
 
@@ -16,8 +20,8 @@ nav ul {
     background-color: red;
 }
 
-p.name {
-    /* For name at upper left. Should this instead be the h1? */
+p.subtitle {
+    /* For subtitle in big graphic section */
 }
 
 p.tools {
