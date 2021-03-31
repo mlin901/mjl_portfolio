@@ -1,0 +1,33 @@
+h1 {
+    /* make it inline? So content is always to the right? */
+    /* Add rule line on right side */
+}
+
+h2 {
+    /* In blocks within cards */
+}
+
+p {
+    /* I guess this will just be used for About Me text */
+}
+
+nav ul {
+    /* remove bullets, make inline, etc. */
+    background-color: red;
+}
+
+p.name {
+    /* For name at upper left. Should this instead be the h1? */
+}
+
+p.tools {
+    /* Descriptions of tools, technologies used in each project */
+}
+
+section#cards {
+    /* The section containing the cards (i.e., the flex box container for the cards) */
+}
+
+.card {
+    /* Styles for cards (flex blocks) */
+}
