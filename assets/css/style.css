@@ -40,6 +40,11 @@ h1 {
 h2 {
     /* make it inline? So content is always to the right? */
     /* Add rule line on right side */
+    position: relative;
+    display: inline-block;
+    top: 20px;
+    width: 18%;
+    text-align: right;
 }
 
 h3 {
@@ -80,25 +85,44 @@ p.tools {
 
 /* The section containing the cards (i.e., the flex box container for the cards) */
 #cards {
+    /* float: right; */
+    position: relative;
+    left: 19%;
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
     /* justify-content: space-between; */
     justify-content: center;   
-    width: 80%;
-    height: 150vh;
-    margin: 0 auto;
+    width: 80%; 
+    /* height: 150vh; */
+    /*margin: 0 auto;*/
     border-style: solid;
     border-width: 2px; 
+    background-color: red;
 }
 
 /* Styles for cards (flex blocks) */
 .card {
     width: 48%;
-    margin-bottom: 2%;
+    margin-bottom: 2%;s
 }
 
 #first {
     width: 96%;
     margin-top: 2%;
 }
+
+@media screen and (max-width: 768px) {
+    #cards
+     {
+      flex-direction: column;
+      /* height: 130vh; */
+    }
+    /* header {
+      background: #772014;
+    }
+    nav,
+    footer {
+      background-color: #bb8588;
+    } */
+  }
