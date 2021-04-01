@@ -43,7 +43,7 @@ h2 {
     position: relative;
     display: inline-block;
     top: 20px;
-    width: 18%;
+    width: 10%;
     text-align: right;
 }
 
@@ -87,7 +87,8 @@ p.tools {
 #cards {
     /* float: right; */
     position: relative;
-    left: 19%;
+    left: 12%;
+    max-width: 1000px;
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
