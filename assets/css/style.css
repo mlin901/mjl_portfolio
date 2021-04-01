@@ -22,16 +22,18 @@
 header {
     background-color: var(--medblue);
     padding-top: 5px;
+    height: 5em;
 }
 /* TODO: Units???? Change px to %? to rem or em? 
          Make padding and margin more compact? 
          Fix background color */
 h1 {
+    display: inline;
     font-size: 2rem;
     color: var(--medblue);
     background-color: var(--ltgreen);
     padding: .4rem .4rem .4rem 4rem;
-    margin: 5px 10px 30px 10px;
+    margin: 5px 10px 0px 10px;
     width: 9.75em;
 }
 
@@ -48,18 +50,24 @@ p {
     /* I guess this will just be used for About Me text */
 }
 
+nav {
+    display: inline;
+}
+
 nav ul {
     /* remove bullets, make inline, etc. */
-    background-color: var(--dkblue);
     color: var(--ltgreen);
-    padding-top: .4rem;
     padding-bottom: .4rem;
     padding-left: 4rem;
+    text-align: right;
 }
 
 nav ul li {
     display: inline;
     padding-left: 1em;
+}
+:visited {
+    color: var(--ltgreen);
 }
 
 p.subtitle {
