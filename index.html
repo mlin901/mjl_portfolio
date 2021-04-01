@@ -11,13 +11,14 @@
 <body>
     <!-- Logo-like name, nav list -->
     <header>
-        <h1>Matt Linder</h1>
+        <h1>Matthew Linder</h1>
         <nav>
             <ul>
-                <li>About me</li>
-                <li>Work</li>
-                <li>Contact me</li>
-                <li>Resume</li>
+                <li><a href="#aboutme">About me</a></li>
+                <li><a href="work">Work</a></li>
+                <li><a href="contact"></a>Contact</a></li>
+                <!-- Where will the following go? -->
+                <li><a href="work"></a>Resume</a></li>
             </ul>
 
         </nav>
@@ -39,14 +40,14 @@
 
         <!-- About me heading/paragraphs -->
         <section>
-            <h2>About me</h2>
+            <h2 id="aboutme">About me</h2>
             <p>Blah blah blah blah blah blah blah blah blah.</p>
             <p>Blah blah blah blah blah blah blah.</p>
         </section>
 
         <!-- "Work" headings/cards -->
         <section>
-            <h2>Work</h2>
+            <h2 id="work">Work</h2>
             <div id="cards">
                 <div class="card" id="first"><img src="./assets/images/image-1.png" alt="placeholder image"/></div>
 
@@ -65,7 +66,7 @@
 
     <!-- "Contact" heading/list -->
     <section>
-        <h2>Contact</h2>
+        <h2 id="contact">Contact</h2>
         <ul>
             <li>****phone</li>
             <li>****website????</li>

@@ -52,6 +52,14 @@ nav ul {
     /* remove bullets, make inline, etc. */
     background-color: var(--dkblue);
     color: var(--ltgreen);
+    padding-top: .4rem;
+    padding-bottom: .4rem;
+    padding-left: 4rem;
+}
+
+nav ul li {
+    display: inline;
+    padding-left: 1em;
 }
 
 p.subtitle {
