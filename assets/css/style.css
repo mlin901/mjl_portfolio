@@ -82,6 +82,11 @@ nav ul li {
     color: var(--ltgreen);
 }
 
+figure {
+    background-color: var(--ltblue);
+    height: 10em;
+}
+
 #contact {
     /* background-color: var(--dkblue); */
     padding-bottom: 1em;
