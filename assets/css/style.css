@@ -1,4 +1,5 @@
-/* CSS variables - from two color schemes in https://coolors.co/palettes/trending */
+/* CSS VARIABLES */
+/*From two color schemes in https://coolors.co/palettes/trending */
 :root {
     --dkblue: #01161E;
     --medblue: #124559;
@@ -12,18 +13,22 @@
     --complement-light: #F6AA1C;
 }
 
+/* UNIVERSAL SELECTOR */
 /* TODO: solidify font-family, add other basic settings? 
          Maybe different font for headings? */
 * {
     font-family: Helvetica, Arial, sans-serif;;
 }
 
+/* HEADER STYLES */
 /* For name in upper left */
 header {
     background-color: var(--medblue);
     padding-top: 5px;
     height: 5em;
 }
+
+/* HEADING STYLES */
 /* TODO: Units???? Change px to %? to rem or em? 
          Make padding and margin more compact? 
          Fix background color */
@@ -45,6 +50,7 @@ h2 {
     top: 20px;
     width: 10%;
     text-align: right;
+    color: var(--complement-semidark);
 }
 
 h3 {
@@ -73,6 +79,13 @@ nav ul li {
 }
 :visited {
     color: var(--ltgreen);
+}
+
+/* "About me" section styles */
+#aboutme p {
+    position: relative;
+    left: 12%;
+    line-height: 1.5;
 }
 
 p.subtitle {
