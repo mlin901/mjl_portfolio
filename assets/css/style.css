@@ -51,6 +51,7 @@ h2 {
     width: 10%;
     text-align: right;
     color: var(--complement-semidark);
+    font-size: 1.5em;
 }
 
 h3 {
@@ -80,6 +81,25 @@ nav ul li {
 :visited {
     color: var(--ltgreen);
 }
+
+#contact {
+    /* background-color: var(--dkblue); */
+    padding-bottom: 1em;
+}
+
+#contact ul {
+    /* text-align: right; */
+    position: relative;
+    left: 12%;
+}
+
+#contact ul li {
+    display: inline;
+    padding-right: 3em;
+    /* color: var(--ltgreen); */
+    font-size: 1.2em;
+}
+
 
 /* "About me" section styles */
 #aboutme p {
@@ -117,12 +137,19 @@ p.tools {
 /* Styles for cards (flex blocks) */
 .card {
     width: 48%;
-    margin-bottom: 2%;s
+    margin-bottom: 2%;
 }
 
 #first {
     width: 96%;
     margin-top: 2%;
+}
+
+footer {
+    position: relative;
+    left: 12%;
+    margin: 50px 0;
+    padding-bottom: 30px;
 }
 
 @media screen and (max-width: 768px) {
