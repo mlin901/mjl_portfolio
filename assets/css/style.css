@@ -1,5 +1,15 @@
+/* For name in upper left */
+header {
+    background-color: slategrey;
+}
+/* TODO: Change px to %? 
+         Make padding and margin more compact? 
+         Fix background color */
 h1 {
-    /* For name in upper left */
+    color: snow;
+    background-color: steelblue;
+    padding: 10px 0px 10px 5px;
+    margin: 10px 10px 10px 30px;
 }
 
 h2 {
@@ -28,10 +38,27 @@ p.tools {
     /* Descriptions of tools, technologies used in each project */
 }
 
-section#cards {
-    /* The section containing the cards (i.e., the flex box container for the cards) */
+/* The section containing the cards (i.e., the flex box container for the cards) */
+#cards {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    /* justify-content: space-between; */
+    justify-content: center;   
+    width: 80%;
+    height: 150vh;
+    margin: 0 auto;
+    border-style: solid;
+    border-width: 2px; 
 }
 
+/* Styles for cards (flex blocks) */
 .card {
-    /* Styles for cards (flex blocks) */
+    width: 48%;
+    margin-bottom: 2%;
+}
+
+#first {
+    width: 96%;
+    margin-top: 2%;
 }
