@@ -1,11 +1,23 @@
-/* CSS variables */
+/* CSS variables - from two color schemes in https://coolors.co/palettes/trending */
 :root {
     --dkblue: #01161E;
     --medblue: #124559;
     --ltblue: #598392;
     --ltgreen: #AEC3B0;
     --offwhite: #EFF6E0;
-  }
+    --compliment-dark: #220901;
+    --complement-semidark: #621708;
+    --complement-med: #941B0C;
+    --complement-semilight: #BC3908;
+    --complement-light: #F6AA1C;
+}
+
+/* TODO: solidify font-family, add other basic settings? 
+         Maybe different font for headings? */
+* {
+    font-family: Helvetica, Arial, sans-serif;;
+}
+
 /* For name in upper left */
 header {
     background-color: var(--medblue);
@@ -18,9 +30,9 @@ h1 {
     font-size: 2rem;
     color: var(--medblue);
     background-color: var(--ltgreen);
-    padding: .8rem 0 .4rem .4rem;
+    padding: .4rem .4rem .4rem 4rem;
     margin: 5px 10px 30px 10px;
-    width: 9em;
+    width: 9.75em;
 }
 
 h2 {
@@ -39,6 +51,7 @@ p {
 nav ul {
     /* remove bullets, make inline, etc. */
     background-color: var(--dkblue);
+    color: var(--ltgreen);
 }
 
 p.subtitle {
