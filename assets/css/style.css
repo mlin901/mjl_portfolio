@@ -1,3 +1,18 @@
+
+/* 
+
+
+NEXT: Need to get all card insets to work like the first one. 
+      Need to add shrink characteristic to cards. 
+      Need to add image as background image for cards (like I did with the first one). 
+
+
+
+
+ */
+
+
+
 /* CSS VARIABLES */
 /*From two color schemes in https://coolors.co/palettes/trending */
 :root {
@@ -92,6 +107,15 @@ figure {
     padding-bottom: 1em;
 }
 
+.cardinset {
+    position: relative;
+    top: 60%;  
+    padding: 1% 1% 1% 1%;
+    width: 15%;
+    background-color: var(--ltgreen);
+    color: var(--complement-semilight);
+}
+
 #contact ul {
     /* text-align: right; */
     position: relative;
@@ -148,6 +172,8 @@ p.tools {
 #first {
     width: 96%;
     margin-top: 2%;
+    background-image: url("https://via.placeholder.com/945x300?text=Project+1");
+    height: 200px;
 }
 
 footer {
