@@ -1,15 +1,26 @@
+/* CSS variables */
+:root {
+    --dkblue: #01161E;
+    --medblue: #124559;
+    --ltblue: #598392;
+    --ltgreen: #AEC3B0;
+    --offwhite: #EFF6E0;
+  }
 /* For name in upper left */
 header {
-    background-color: slategrey;
+    background-color: var(--medblue);
+    padding-top: 5px;
 }
-/* TODO: Change px to %? 
+/* TODO: Units???? Change px to %? to rem or em? 
          Make padding and margin more compact? 
          Fix background color */
 h1 {
-    color: snow;
-    background-color: steelblue;
-    padding: 10px 0px 10px 5px;
-    margin: 10px 10px 10px 30px;
+    font-size: 2rem;
+    color: var(--medblue);
+    background-color: var(--ltgreen);
+    padding: .8rem 0 .4rem .4rem;
+    margin: 5px 10px 30px 10px;
+    width: 9em;
 }
 
 h2 {
@@ -27,7 +38,7 @@ p {
 
 nav ul {
     /* remove bullets, make inline, etc. */
-    background-color: red;
+    background-color: var(--dkblue);
 }
 
 p.subtitle {
