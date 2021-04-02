@@ -67,6 +67,7 @@ h2 {
     text-align: right;
     color: var(--complement-semidark);
     font-size: 1.5em;
+    padding-right: .5em;
 }
 
 h3 {
@@ -97,23 +98,14 @@ nav ul li {
     color: var(--ltgreen);
 }
 
-figure {
+/* figure {
     background-color: var(--ltblue);
     height: 10em;
-}
+} */
 
 #contact {
     /* background-color: var(--dkblue); */
     padding-bottom: 1em;
-}
-
-.cardinset {
-    position: relative;
-    top: 60%;  
-    padding: 1% 1% 1% 1%;
-    width: 15%;
-    background-color: var(--ltgreen);
-    color: var(--complement-semilight);
 }
 
 #contact ul {
@@ -147,26 +139,83 @@ p.tools {
 
 /* The section containing the cards (i.e., the flex box container for the cards) */
 #cards {
-    /* float: right; */
-    position: relative;
+    /* position: relative;   ====OLDSECTION======
     left: 12%;
     max-width: 1000px;
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
-    /* justify-content: space-between; */
     justify-content: center;   
     width: 80%; 
-    /* height: 150vh; */
-    /*margin: 0 auto;*/
     border-style: solid;
-    border-width: 2px; 
+    border-width: 2px;  */
+
+    position: relative;
+    left: 10%;
+    /* --begin-- */
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    /* margin-left: -1.5rem;
+    margin-right: -1.5rem; */
+
+    justify-content: center;
+        /* ----end---- */
+    padding-right: 12%;
+}
+
+.card-container {
+        /* --begin-- */
+    flex: 1 0 100%;
+    /* padding: 1.5rem; */
+    /* when the screen resizes, make it so our columns don't jump in size */
+    transition: flex-basis 500ms linear;
+    /* margin-bottom: 1.5rem; */
+        /* ----end---- */
 }
 
 /* Styles for cards (flex blocks) */
-.card {
-    width: 48%;
-    margin-bottom: 2%;
+.card {   
+    /* width: 48%;   =======OLDSECTION======
+    margin-bottom: 2%; */ 
+
+    padding: 0 0 0 2rem;
+        /* --begin-- */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    min-height: 100%;
+    /* padding: 2rem; */
+    color: var(--complement-semilight);
+
+    /* outline is like border, but on the outside of the box instead of inside */
+    outline: 2px dashed var(--complement-light);
+    outline-offset: -2px;
+    transition: all 0.5s ease-in-out;
+       /* ----end---- */
+}
+
+.cardinset {    
+    /* position: relative;  ====OLDSECTION=====
+    top: -60%;  
+    padding: 1% 1% 1% 1%;
+    width: 25%;
+    background-color: var(--ltgreen);
+    color: var(--complement-semilight); */
+
+    /* TODO: control width, improve colors, 
+            improve font?, improve position? */
+        /* --begin-- */
+    /* use position and negative margins to move title of card over the card's outline and create an overlap effect */
+    position: relative;
+    margin: -4rem 0 1.5rem 0;
+    padding: 0.5rem 1rem;
+    background-color: var(--ltgreen);
+    color: var(--complement-semilight);
+    border: 2px solid var(--complement-med);
+    /* border-radius: 8px; */
+    transition: all 0.5s ease-in-out; /* ??? */
+       /* ----end---- */
 }
 
 #first {
@@ -176,6 +225,8 @@ p.tools {
     height: 200px;
 }
 
+
+/* FOOTER */
 footer {
     position: relative;
     left: 12%;
@@ -183,17 +234,40 @@ footer {
     padding-bottom: 30px;
 }
 
-@media screen and (max-width: 768px) {
+
+/* MEDIA QUERIES */
+/* @media screen and (max-width: 768px) {  ======OLDSECTION=========
     #cards
      {
       flex-direction: column;
-      /* height: 130vh; */
     }
-    /* header {
-      background: #772014;
+
+  } */
+
+        /* -----begin---- */
+  /* using a mobile-first approach, use `min-width` values going from narrow -> wide for a responsive design */
+@media screen and (min-width: 768px) {
+    /* on tablets, set columns to only be 50% of the width and not grow */
+    .card-container {
+      flex: 0 0 100%;
+      max-width: 100%;
     }
-    nav,
-    footer {
-      background-color: #bb8588;
-    } */
+  
+    /* select the last child to grow to full width if it has space to grow */
+    .card-container:last-child {   /* ???? */
+      flex-grow: 1;
+    }
   }
+  
+  /* media query for larger screens */
+  @media screen and (min-width: 992px) {
+    header {
+      width: 75%;
+    }
+  
+    .card-container {
+      flex: 0 0 50%;
+      max-width: 50%;
+    }
+  }
+        /* -------end------- */
