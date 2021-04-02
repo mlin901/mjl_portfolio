@@ -1,20 +1,6 @@
 
-/* 
-
-
-NEXT: Need to get all card insets to work like the first one. 
-      Need to add shrink characteristic to cards. 
-      Need to add image as background image for cards (like I did with the first one). 
-
-
-
-
- */
-
-
-
 /* CSS VARIABLES */
-/*From two color schemes in https://coolors.co/palettes/trending */
+/* From two color schemes found in https://coolors.co/palettes/trending */
 :root {
     --dkblue: #01161E;
     --medblue: #124559;
@@ -38,9 +24,16 @@ NEXT: Need to get all card insets to work like the first one.
 /* HEADER STYLES */
 /* For name in upper left */
 header {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    /* ^^^^^^^^^^^^^^^^ */
+    
+    
     background-color: var(--medblue);
     padding-top: 5px;
-    height: 5em;
+    padding-bottom: 1.5em;
+    /* height: 5em; */
 }
 
 /* HEADING STYLES */
@@ -70,6 +63,10 @@ h2 {
     padding-right: .5em;
 }
 
+#aboutme h2 {
+    top: 48px;
+}
+
 h3 {
     /* In blocks within cards */
 }
@@ -79,24 +76,28 @@ p {
 }
 
 nav {
-    display: inline;
+    /* display: inline; */
 }
 
 nav ul {
-    /* remove bullets, make inline, etc. */
-    color: var(--ltgreen);
-    padding-bottom: .4rem;
+    padding-top: 4rem;
     padding-left: 4rem;
     padding-right: 2em;
-    text-align: right;
+    text-align: center;
 }
 
 nav ul li {
+    color: var(--ltgreen);
     display: inline;
     padding-left: 1em;
 }
-:visited {
+
+:link, :visited {
     color: var(--ltgreen);
+}
+
+:hover, :active {
+    color: var(--complement-semilight);
 }
 
 /* figure {
@@ -132,6 +133,11 @@ nav ul li {
 
 p.subtitle {
     /* For subtitle in big graphic section */
+    position: relative;
+    top: 1em;
+    text-align: right;
+    padding-right: 4em;
+    padding-top: 5em;
 }
 
 p.tools {
@@ -140,84 +146,44 @@ p.tools {
 
 /* The section containing the cards (i.e., the flex box container for the cards) */
 #cards {
-    /* position: relative;   ====OLDSECTION======
-    left: 12%;
-    max-width: 1000px;
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    justify-content: center;   
-    width: 80%; 
-    border-style: solid;
-    border-width: 2px;  */
-
-    /* TODO: left rule line */
     position: relative;
     left: 10%;
-    /* --begin-- */
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
-    /* margin-left: -1.5rem;
-    margin-right: -1.5rem; */
-
     justify-content: center;
-        /* ----end---- */
     padding-right: 12%;
 }
 
 .card-container {
-        /* --begin-- */
     flex: 1 0 100%;
-    /* padding: 1.5rem; */
-    /* when the screen resizes, make it so our columns don't jump in size */
+    /* !!!!!!!when the screen resizes, make it so our columns don't jump in size */
     transition: flex-basis 500ms linear;
-    /* margin-bottom: 1.5rem; */
-        /* ----end---- */
 }
 
 /* Styles for cards (flex blocks) */
 .card {   
-    /* width: 48%;   =======OLDSECTION======
-    margin-bottom: 2%; */ 
-
     padding: 0 0 0 2rem;
-        /* --begin-- */
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     min-height: 100%;
-    /* padding: 2rem; */
     color: var(--complement-semilight);
-
+    /* Remove the following--though I'm not sure about "transition"**** */
     /* outline is like border, but on the outside of the box instead of inside */
     outline: 2px dashed var(--complement-light);
     outline-offset: -2px;
     transition: all 0.5s ease-in-out;
-       /* ----end---- */
 }
 
 .cardinset {    
-    /* position: relative;  ====OLDSECTION=====
-    top: -60%;  
-    padding: 1% 1% 1% 1%;
-    width: 25%;
-    background-color: var(--ltgreen);
-    color: var(--complement-semilight); */
-
-    /* TODO: control width, improve colors, 
-            improve font?, improve position? */
-        /* --begin-- */
-    /* use position and negative margins to move title of card over the card's outline and create an overlap effect */
     position: relative;
-    margin: -4rem 0 1.5rem 0;
-    padding: 0.5rem 1rem;
-    background-color: var(--ltgreen);
-    color: var(--complement-semilight);
-    border: 2px solid var(--complement-med);
-    /* border-radius: 8px; */
-    transition: all 0.5s ease-in-out; /* ??? */
-       /* ----end---- */
+    margin: -4rem 0 1.5rem 0; /* ???????????? */
+    padding: 0.5rem 1rem; /* ???????????? */
+    background-color: var(--medblue);
+    color: var(--ltgreen);
+    /* transition: all 0.5s ease-in-out;  */
+    width: 12rem;
 }
 
 #first {
@@ -241,13 +207,17 @@ footer {
 
 /* TODO: smaller screens - i.e., phones? Really, 
 though, that's the default given this min-width scheme, so I 
-should just adjust the main settings */
+should just adjust the main settings. The header area 
+really needs work in this regard. */
 
-/* add rule line these media queries, not in main thing */
 
 @media screen and (min-width: 650px) {
     #cards {
         border-left: 5px solid var(--compliment-dark);
+    }
+
+    nav ul {
+        text-align: right;
     }
 }
 
