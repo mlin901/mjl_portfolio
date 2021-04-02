@@ -87,6 +87,7 @@ nav ul {
     color: var(--ltgreen);
     padding-bottom: .4rem;
     padding-left: 4rem;
+    padding-right: 2em;
     text-align: right;
 }
 
@@ -150,6 +151,7 @@ p.tools {
     border-style: solid;
     border-width: 2px;  */
 
+    /* TODO: left rule line */
     position: relative;
     left: 10%;
     /* --begin-- */
@@ -235,39 +237,38 @@ footer {
 }
 
 
-/* MEDIA QUERIES */
-/* @media screen and (max-width: 768px) {  ======OLDSECTION=========
-    #cards
-     {
-      flex-direction: column;
+/* MEDIA QUERIES - adapted from class project 28-Stu-Mini-Project */
+
+/* TODO: smaller screens - i.e., phones? Really, 
+though, that's the default given this min-width scheme, so I 
+should just adjust the main settings */
+
+/* add rule line these media queries, not in main thing */
+
+@media screen and (min-width: 650px) {
+    .card {
+        border-left: 5px solid var(--compliment-dark);
     }
+}
 
-  } */
-
-        /* -----begin---- */
-  /* using a mobile-first approach, use `min-width` values going from narrow -> wide for a responsive design */
 @media screen and (min-width: 768px) {
-    /* on tablets, set columns to only be 50% of the width and not grow */
+    /* Tablet sized screens */
     .card-container {
       flex: 0 0 100%;
       max-width: 100%;
     }
   
-    /* select the last child to grow to full width if it has space to grow */
-    .card-container:last-child {   /* ???? */
-      flex-grow: 1;
+        /* First project card gets the entire width of the flex box */
+    .card-container:first-child {   
+        flex: 0 0 100%;
+        max-width: 100%;
     }
   }
   
-  /* media query for larger screens */
+  /* Larger screens */
   @media screen and (min-width: 992px) {
-    header {
-      width: 75%;
-    }
-  
     .card-container {
       flex: 0 0 50%;
       max-width: 50%;
     }
   }
-        /* -------end------- */
