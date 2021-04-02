@@ -21,6 +21,11 @@
     font-family: Helvetica, Arial, sans-serif;;
 }
 
+/* PAGE-WIDE STYLES */
+:link, :visited {
+    color: var(--ltgreen);
+}
+
 /* HEADER STYLES */
 /* For name in upper left */
 header {
@@ -32,10 +37,6 @@ header {
     padding-bottom: 1.5em;
 }
 
-/* HEADING STYLES */
-/* TODO: Units???? Change px to %? to rem or em? 
-         Make padding and margin more compact? 
-         Fix background color */
 h1 {
     display: inline;
     font-size: 2rem;
@@ -44,48 +45,6 @@ h1 {
     padding: .4rem .4rem .4rem 4rem;
     margin: 5px 10px 0px 10px;
     width: 9.75em;
-}
-
-h2 {
-    /* make it inline? So content is always to the right? */
-    /* Add rule line on right side */
-    position: relative;
-    display: inline-block;
-    width: 100px; 
-    text-align: right;
-    color: var(--complement-semidark);
-    font-size: 1.5em;
-    padding-right: .5em;
-}
-
-#subtitlearea {
-    height: 8em;
-    background-color: var(--ltgreen);
-}
-
-#work {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-}
-
-#aboutme, #testcontainer, #xx-workcontainer{
-    display: flex;
-    justify-content: flex-start;
-    flex-direction: row;
-    flex-wrap: wrap;
-}
-
-h3 {
-    /* In blocks within cards */
-}
-
-p {
-    /* I guess this will just be used for About Me text */
-}
-
-nav {
-    /* display: inline; */
 }
 
 nav ul {
@@ -101,38 +60,11 @@ nav ul li {
     padding-left: 1em;
 }
 
-:link, :visited {
-    color: var(--ltgreen);
-}
+/* SUBTITLE SECTION STYLES */
 
-:hover, :active {
-    color: var(--complement-semilight);
-}
-
-main {
-    padding-top: 1em;
-}
-
-#contact {
-    padding-bottom: 1em;
-}
-
-#contact ul {
-    position: relative;
-    left: 12%;
-}
-
-#contact ul li {
-    display: inline;
-    padding-right: 3em;
-    font-size: 1.2em;
-}
-
-
-/* "About me" section styles */
-.mecontent .testcards .xx-testcards {
-    flex-grow: 1; 
-    line-height: 1.5;
+#subtitlearea {
+    height: 8em;
+    background-color: var(--ltgreen);
 }
 
 p.subtitle {
@@ -144,26 +76,41 @@ p.subtitle {
     padding-top: 5em;
 }
 
-p.tools {
-    /* Descriptions of tools, technologies used in each project */
+/* MAIN STYLES */
+
+h2 {
+    /* make it inline? So content is always to the right? */
+    /* Add rule line on right side */
+    position: relative;
+    display: inline-block;
+    width: 100px; 
+    text-align: right;
+    color: var(--complement-semidark);
+    font-size: 1.5em;
+    padding-right: .5em;
 }
 
-/* The section containing the cards (i.e., the flex box container for the cards) */
-#cards {
-    flex-grow: 1; 
+.zz-maincont, .zz-cardcontainer {
     display: flex;
+    justify-content: flex-start;
     flex-wrap: wrap;
-    flex-direction: row;
-    justify-content: center;
 }
 
-.card-container {
-    flex: 1 0 100%;
-    transition: flex-basis 500ms linear; /* ????? */
+.zz-maincont {
+    padding-top: 1em;
 }
 
-/* Styles for cards (flex blocks) */
-.card, .zz-cardfigcont {   
+.zz-maincont h2 {
+    color: red;
+    width: 160px;
+}
+
+.zz-cards, .zz-cardfigcont {
+    flex: 1 0 300px;
+    line-height: 1.5;
+}
+
+.zz-cardfigcont {   
     padding: 0 0 0 1rem;
     display: flex;
     flex-direction: column;
@@ -187,13 +134,20 @@ p.tools {
     width: 12rem;
 }
 
-#first {
-    width: 96%;
-    margin-top: 2%;
-    background-image: url("https://via.placeholder.com/945x300?text=Project+1");
-    height: 200px;
+#contact {
+    padding-bottom: 1em;
 }
 
+#contact ul {
+    position: relative;
+    left: 12%;
+}
+
+#contact ul li {
+    display: inline;
+    padding-right: 3em;
+    font-size: 1.2em;
+}
 
 /* FOOTER */
 footer {
@@ -202,27 +156,6 @@ footer {
     margin: 50px 0;
     padding-bottom: 30px;
 }
-
-
-
-/* TEST******** */
-
-.xx-testcontainer, .xx-workcontainer, .xx-innercontainer, .zz-cardcontainer, .zz-maincont{
-    display: flex;
-    justify-content: flex-start;
-    flex-wrap: wrap;
-}
-
-.xx-testcards, .zz-cards, .xx-inneritem, .zz-cardfigcont {
-    flex: 1 0 300px;
-    line-height: 1.5;
-}
-
-.xx-testcontainer h2, .xx-workcontainer h2, .zz-maincont h2 {
-    color: red;
-    width: 160px;
-}
-
 
 /* MEDIA QUERIES - adapted from class project 28-Stu-Mini-Project */
 /* TODO: smaller screens - i.e., phones? Really, 
@@ -245,7 +178,7 @@ really needs work in this regard. */
         text-align: right;
     }
 
-    .xx-testcontainer, .xx-workcontainer, .zz-maincont{
+    .zz-maincont{
         flex-direction: row;
     }
 
@@ -272,3 +205,11 @@ really needs work in this regard. */
       max-width: 50%;
     }
   }
+
+
+
+
+  /* HEADING STYLES */
+/* TODO: Units???? Change px to %? to rem or em? 
+         Make padding and margin more compact? 
+         Fix background color */
