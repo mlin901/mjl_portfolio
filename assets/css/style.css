@@ -27,13 +27,9 @@ header {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    /* ^^^^^^^^^^^^^^^^ */
-    
-    
     background-color: var(--medblue);
     padding-top: 5px;
     padding-bottom: 1.5em;
-    /* height: 5em; */
 }
 
 /* HEADING STYLES */
@@ -55,16 +51,29 @@ h2 {
     /* Add rule line on right side */
     position: relative;
     display: inline-block;
-    top: 20px;
-    width: 10%;
+    width: 100px; 
     text-align: right;
     color: var(--complement-semidark);
     font-size: 1.5em;
     padding-right: .5em;
 }
 
-#aboutme h2 {
-    top: 48px;
+#subtitlearea {
+    height: 8em;
+    background-color: var(--ltgreen);
+}
+
+#work {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+#aboutme, #testcontainer, #xx-workcontainer{
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: row;
+    flex-wrap: wrap;
 }
 
 h3 {
@@ -100,18 +109,15 @@ nav ul li {
     color: var(--complement-semilight);
 }
 
-/* figure {
-    background-color: var(--ltblue);
-    height: 10em;
-} */
+main {
+    padding-top: 1em;
+}
 
 #contact {
-    /* background-color: var(--dkblue); */
     padding-bottom: 1em;
 }
 
 #contact ul {
-    /* text-align: right; */
     position: relative;
     left: 12%;
 }
@@ -119,15 +125,13 @@ nav ul li {
 #contact ul li {
     display: inline;
     padding-right: 3em;
-    /* color: var(--ltgreen); */
     font-size: 1.2em;
 }
 
 
 /* "About me" section styles */
-#aboutme p {
-    position: relative;
-    left: 12%;
+.mecontent .testcards .xx-testcards {
+    flex-grow: 1; 
     line-height: 1.5;
 }
 
@@ -146,24 +150,21 @@ p.tools {
 
 /* The section containing the cards (i.e., the flex box container for the cards) */
 #cards {
-    position: relative;
-    left: 10%;
+    flex-grow: 1; 
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
     justify-content: center;
-    padding-right: 12%;
 }
 
 .card-container {
     flex: 1 0 100%;
-    /* !!!!!!!when the screen resizes, make it so our columns don't jump in size */
-    transition: flex-basis 500ms linear;
+    transition: flex-basis 500ms linear; /* ????? */
 }
 
 /* Styles for cards (flex blocks) */
-.card {   
-    padding: 0 0 0 2rem;
+.card, .zz-cardfigcont {   
+    padding: 0 0 0 1rem;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -174,6 +175,7 @@ p.tools {
     outline: 2px dashed var(--complement-light);
     outline-offset: -2px;
     transition: all 0.5s ease-in-out;
+    max-width: 400px; /* ??????????????/<---------- */
 }
 
 .cardinset {    
@@ -182,7 +184,6 @@ p.tools {
     padding: 0.5rem 1rem; /* ???????????? */
     background-color: var(--medblue);
     color: var(--ltgreen);
-    /* transition: all 0.5s ease-in-out;  */
     width: 12rem;
 }
 
@@ -203,13 +204,37 @@ footer {
 }
 
 
-/* MEDIA QUERIES - adapted from class project 28-Stu-Mini-Project */
 
+/* TEST******** */
+
+.xx-testcontainer, .xx-workcontainer, .xx-innercontainer, .zz-cardcontainer, .zz-maincont{
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+}
+
+.xx-testcards, .zz-cards, .xx-inneritem, .zz-cardfigcont {
+    flex: 1 0 300px;
+    line-height: 1.5;
+}
+
+.xx-testcontainer h2, .xx-workcontainer h2, .zz-maincont h2 {
+    color: red;
+    width: 160px;
+}
+
+
+/* MEDIA QUERIES - adapted from class project 28-Stu-Mini-Project */
 /* TODO: smaller screens - i.e., phones? Really, 
 though, that's the default given this min-width scheme, so I 
 should just adjust the main settings. The header area 
 really needs work in this regard. */
 
+@media screen and (min-width: 460px) {
+}
+
+@media screen and (min-width: 560px) {
+}
 
 @media screen and (min-width: 650px) {
     #cards {
@@ -219,6 +244,11 @@ really needs work in this regard. */
     nav ul {
         text-align: right;
     }
+
+    .xx-testcontainer, .xx-workcontainer, .zz-maincont{
+        flex-direction: row;
+    }
+
 }
 
 @media screen and (min-width: 768px) {
@@ -229,7 +259,7 @@ really needs work in this regard. */
     }
   
         /* First project card gets the entire width of the flex box */
-    .card-container:first-child {   
+    .card-container:first-child, .zz-cardfigcont:first-child {   
         flex: 0 0 100%;
         max-width: 100%;
     }

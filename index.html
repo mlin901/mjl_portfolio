@@ -1,13 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
+    
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Matt Linder Portfolio</title>
     <link rel="stylesheet" href="./assets/css/reset.css" />
-    <link rel="stylesheet" href="./assets/css/style.css" />  
+    <link rel="stylesheet" href="./assets/css/style_new.css" />  
 </head>
+
 <body>
     <!-- Logo-like name, nav list -->
     <header>
@@ -17,127 +19,97 @@
                 <li><a href="#aboutme">About me</a></li>
                 <li><a href="#work">Work</a></li>
                 <li><a href="#contact">Contact</a></li>
-                <!-- Where will the following go? -->
                 <li><a href="#">Resume</a></li>
             </ul>
 
         </nav>
 
-    </header>
+    </header>  
 
     <!-- graphic with subtitle -->
-    <section>
+    <section id="subtitlearea">
         <figure>
             <!-- *************?????????????????? -->
         </figure>
 
-        <p class="subtitle"></p>
+        <p class="subtitle">This is a subtitle</p>
 
     </section>
 
     <!-- "About me" heading/paragraphs, "Work" heading/cards -->
     <main>
 
-        <!-- About me heading/paragraphs -->
-        <section id="aboutme">
-            <h2>About me</h2>
-            <p>Blah blah blah blah blah blah blah blah blah.</p>
-            <p>Blah blah blah blah blah blah blah.</p>
+        <section class="zz-maincont">
+            <h2>About<br>me</h2>
+            <div class="xx-testcards">
+                <p>Blah blah blah blah blah blah blah blah blah.</p>
+                <p>Blah blah blah blah blah blah blah.</p>            </div>
         </section>
 
-        <!-- "Work" headings/cards -->
-        <section id="work">
-            <h2>Work</h2>
-            <div id="cards">
-                <!-- <div class="card" id="first"><img src="./assets/images/image-1.png" alt="placeholder image"/></div> -->
-
-                <!-- -------begin-------- -->
-                <div class="card-container">
-                    <figure class="card">
-                        <img src="https://via.placeholder.com/368x200?text=1" alt="placeholder image"/>
+        <section class="zz-maincont">
+            <h2>zz-Work</h2>
+            <div class="zz-cards">
+                <div class="zz-cardcontainer">
+                    <figure class="zz-cardfigcont">
+                        <img src="https://via.placeholder.com/568x200?text=1" alt="placeholder image"/>
                         <div class="cardinset">
                             <h3>Project 1</h3>
                             <p>This is project 1...</p>
                         </div>
                     </figure>
-                 </div>
-                <!-- --------end------- -->
-
-                <!-- -------begin 2-------- -->
-                <div class="card-container">
-                    <figure class="card">
+                    <figure class="zz-cardfigcont">
                         <img src="https://via.placeholder.com/368x200?text=2" alt="placeholder image"/>
                         <div class="cardinset">
                             <h3>Project 2</h3>
                             <p>This is project 2...</p>
                         </div>
                     </figure>
-                 </div>
-                <!-- --------end 2------- -->
-                
-                <!-- -------begin 3-------- -->
-                <div class="card-container">
-                    <figure class="card">
+                    <figure class="zz-cardfigcont">
                         <img src="https://via.placeholder.com/368x200?text=3" alt="placeholder image"/>
                         <div class="cardinset">
-                            <h3>Project 3</h3>
+                            <h3>Project 3/h3>
                             <p>This is project 3...</p>
                         </div>
                     </figure>
-                 </div>
-                <!-- --------end 3------- -->
-
-                <!-- -------begin 4-------- -->
-                <div class="card-container">
-                    <figure class="card">
+                    <figure class="zz-cardfigcont">
                         <img src="https://via.placeholder.com/368x200?text=4" alt="placeholder image"/>
                         <div class="cardinset">
                             <h3>Project 4</h3>
                             <p>This is project 4...</p>
                         </div>
                     </figure>
-                 </div>
-                <!-- --------end 4------- -->
-                
-                <!-- -------begin 5-------- -->
-                <div class="card-container">
-                    <figure class="card">
-                        <img src="https://via.placeholder.com/468x200?text=5" alt="placeholder image"/>
+                    <figure class="zz-cardfigcont">
+                        <img src="https://via.placeholder.com/368x200?text=5" alt="placeholder image"/>
                         <div class="cardinset">
                             <h3>Project 5</h3>
                             <p>This is project 5...</p>
                         </div>
                     </figure>
-                 </div>
-                <!-- --------end 5------- -->                
 
-                <!-- <div class="card"><img src="https://via.placeholder.com/468x200?text=Project+3" alt="placeholder image"/></div>
-                <div class="card"><img src="https://via.placeholder.com/468x200?text=Project+4" alt="placeholder image"/></div>
-                <div class="card"><img src="https://via.placeholder.com/468x200?text=Project+5" alt="placeholder image"/></div>                     -->
-
-                <!-- <div class="card"><img src="./assets/images/camera.jpg" alt="placeholder image"/></div>
-                <div class="card"><img src="./assets/images/tablet.jpg" alt="placeholder image"/></div>
-                <div class="card"><img src="./assets/images/camera.jpg" alt="placeholder image"/></div>
-                <div class="card"><img src="./assets/images/tablet.jpg" alt="placeholder image"/></div>                     -->
-            </div>  
-        </section>
+                </div>     
+            </div>
+        </section>        
     </main>
 
     <!-- "Contact" heading/list -->
-    <section id="contact">
+    <section class="zz-maincont">
         <h2>Contact</h2>
-        <ul>
-            <li>****phone</li>
-            <li>****website????</li>
-            <li>****GitHub</li>
-            <li>*****twitter???</li>
-            <li>****spotify????</li>
-        </ul>
+        <div class="xx-testcards">
+            <ul>
+                <li>Phone[???]</li>
+                <li>LinkedIn</li>
+                <li>GitHub</li>
+                <li>Email</li>
+                <li>Resume</li>
+            </ul>
+       </div>
     </section>
+
 
     <!-- Footer -->
     <footer>
         <p>Project created in UC Davis Bootcamp</p>
     </footer>
+    
 </body>
 </html>
