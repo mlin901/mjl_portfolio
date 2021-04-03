@@ -1,5 +1,4 @@
-
-/* CSS VARIABLES */
+/* VARIABLES */
 /* From two color schemes found in https://coolors.co/palettes/trending */
 :root {
     --dkblue: #01161E;
@@ -33,24 +32,29 @@ header {
     justify-content: space-between;
     flex-wrap: wrap;
     background-color: var(--medblue);
-    padding-top: 5px;
+    padding-top: .25em;
     padding-bottom: 1.5em;
 }
 
+nav {
+    margin: auto;
+}
+
 h1 {
-    display: inline;
+    /* display: inline; */
     font-size: 2rem;
     color: var(--medblue);
     background-color: var(--ltgreen);
-    padding: .4rem .4rem .4rem 4rem;
-    margin: 5px 10px 0px 10px;
+    padding: .4rem 0 .4rem 0;
     width: 9.75em;
+    text-align: center;
+    margin: auto;
 }
 
 nav ul {
     padding-top: 4rem;
-    padding-left: 4rem;
-    padding-right: 2em;
+    padding-left: 0;
+    padding-right: 0;
     text-align: center;
 }
 
@@ -66,13 +70,14 @@ nav ul li {
     background-color: var(--ltgreen);
 }
 
-p.subtitle {
+p#subtitle {
     /* For subtitle in big graphic section */
     position: relative;
     top: 1em;
-    text-align: right;
-    padding-right: 4em;
-    padding-top: 5em;
+    text-align: center;
+    padding-right: 0;
+    padding-top: 3em;
+    font-size: 1.5em;
 }
 
 /* MAIN STYLES */
@@ -92,14 +97,11 @@ p.subtitle {
     /* Add rule line on right side */
     position: relative;
     display: inline-block;
-    /* width: 100px;  */
-    /* text-align: right; */
     text-align: center;
     color: var(--complement-semidark);
     font-size: 1.5em;
     padding-right: .5em;
     color: var(--complement-semidark);
-    /* width: 160px; */
 }
 
 .zz-cards, .zz-cardfigcont {
@@ -164,6 +166,26 @@ really needs work in this regard. */
 }
 
 @media screen and (min-width: 560px) {
+    p#subtitle {
+        text-align: right;
+        padding-right: 4em;
+    }
+
+    nav {
+        margin: revert;
+    }
+
+    h1 {
+        text-align: unset;
+        padding: .4rem .4rem .4rem 4rem;
+        margin: 5px 10px 0px 10px;    
+    }
+
+    nav ul {
+        padding-left: 4rem;
+        padding-right: 2em;
+    }
+    
     .zz-maincont h2 {
         text-align: right;
         width: 160px;
@@ -172,6 +194,7 @@ really needs work in this regard. */
     .zz-maincont, .zz-cardcontainer {
         justify-content: center;
     }
+
     .zz-maincont:first-child {   
         flex: 0 0 100%;
         max-width: 100%;
@@ -183,23 +206,13 @@ really needs work in this regard. */
         border-left: 5px solid var(--compliment-dark);
     }
 
-    nav ul {
-        text-align: right;
-    }
-
     .zz-maincont{
         flex-direction: row;
     }
 }
 
 @media screen and (min-width: 768px) {
-    /* Tablet sized screens */
-    /* .card-container {
-      flex: 0 0 100%;
-      max-width: 100%;
-    }
-   */
-        /* First project card gets the entire width of the flex box */
+    /* First project card gets the entire width of the flex box */
     .zz-cardfigcont:first-child {   
         flex: 0 0 100%;
         max-width: 100%;
@@ -213,8 +226,6 @@ really needs work in this regard. */
       max-width: 50%;
     } */
   }
-
-
 
 
   /* HEADING STYLES */
