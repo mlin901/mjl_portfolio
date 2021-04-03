@@ -82,17 +82,21 @@ p#subtitle {
 
 /* MAIN STYLES */
 
-.zz-maincont, .zz-cardcontainer {
+main {
+    margin-right: 1em;
+}
+
+.maincontent, .zz-cardcontainer {
     display: flex;
     justify-content: flex-start;
     flex-wrap: wrap;
 }
 
-.zz-maincont {
+.maincontent {
     padding-top: 1.5em;
 }
 
-.zz-maincont h2 {
+.maincontent h2 {
     /* make it inline? So content is always to the right? */
     /* Add rule line on right side */
     position: relative;
@@ -104,9 +108,23 @@ p#subtitle {
     color: var(--complement-semidark);
 }
 
-.zz-cards, .zz-cardfigcont {
-    flex: 1 0 300px;
+.zz-cards {
+    flex: 1 0 368px; /* +++++++++++++++++++++++++++++++*/
     line-height: 1.5;
+}
+
+.zz-cardfigcont {
+    flex: 1 0 368px; /* +++++++++++++++++++++++++++++++*/
+    line-height: 1.5;
+}
+
+.zz-textcont {
+    flex: 1 0 368px; /* +++++++++++++++++++++++++++++++*/
+    line-height: 1.5;
+}
+
+.zz-textcont p {
+    margin-bottom: .4em;
 }
 
 .zz-cardfigcont {   
@@ -186,16 +204,16 @@ really needs work in this regard. */
         padding-right: 2em;
     }
     
-    .zz-maincont h2 {
+    .maincontent h2 {
         text-align: right;
         width: 160px;
     }
 
-    .zz-maincont, .zz-cardcontainer {
+    /* .zz-maincont, .zz-cardcontainer {
         justify-content: center;
-    }
+    } */
 
-    .zz-maincont:first-child {   
+    .manincontent:first-child {   
         flex: 0 0 100%;
         max-width: 100%;
     }
@@ -206,7 +224,7 @@ really needs work in this regard. */
         border-left: 5px solid var(--compliment-dark);
     }
 
-    .zz-maincont{
+    .maincontent{
         flex-direction: row;
     }
 }
