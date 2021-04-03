@@ -113,7 +113,7 @@ main {
     line-height: 1.5;
 }
 
-.zz-cardfigcont {
+.zz-cardfig {
     flex: 1 0 368px; /* +++++++++++++++++++++++++++++++*/
     line-height: 1.5;
 }
@@ -127,7 +127,7 @@ main {
     margin-bottom: .4em;
 }
 
-.zz-cardfigcont {   
+.zz-cardfig {   
     padding: 0 0 0 1rem;
     display: flex;
     flex-direction: column;
@@ -180,8 +180,6 @@ though, that's the default given this min-width scheme, so I
 should just adjust the main settings. The header area 
 really needs work in this regard. */
 
-@media screen and (min-width: 460px) {
-}
 
 @media screen and (min-width: 560px) {
     p#subtitle {
@@ -209,10 +207,6 @@ really needs work in this regard. */
         width: 160px;
     }
 
-    /* .zz-maincont, .zz-cardcontainer {
-        justify-content: center;
-    } */
-
     .manincontent:first-child {   
         flex: 0 0 100%;
         max-width: 100%;
@@ -231,12 +225,14 @@ really needs work in this regard. */
 
 @media screen and (min-width: 768px) {
     /* First project card gets the entire width of the flex box */
-    .zz-cardfigcont:first-child {   
+    /* .zz-cardfig:first-child {    */
+        #firstitem {
         flex: 0 0 100%;
-        max-width: 100%;
+        max-width: 800px;   /* +++++++++++ */
     }
   }
   
+
   /* Larger screens */
   @media screen and (min-width: 992px) {
     /* .card-container {
@@ -244,9 +240,3 @@ really needs work in this regard. */
       max-width: 50%;
     } */
   }
-
-
-  /* HEADING STYLES */
-/* TODO: Units???? Change px to %? to rem or em? 
-         Make padding and margin more compact? 
-         Fix background color */
