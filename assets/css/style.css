@@ -61,7 +61,6 @@ nav ul li {
 }
 
 /* SUBTITLE SECTION STYLES */
-
 #subtitlearea {
     height: 8em;
     background-color: var(--ltgreen);
@@ -78,18 +77,6 @@ p.subtitle {
 
 /* MAIN STYLES */
 
-h2 {
-    /* make it inline? So content is always to the right? */
-    /* Add rule line on right side */
-    position: relative;
-    display: inline-block;
-    width: 100px; 
-    text-align: right;
-    color: var(--complement-semidark);
-    font-size: 1.5em;
-    padding-right: .5em;
-}
-
 .zz-maincont, .zz-cardcontainer {
     display: flex;
     justify-content: flex-start;
@@ -97,12 +84,22 @@ h2 {
 }
 
 .zz-maincont {
-    padding-top: 1em;
+    padding-top: 1.5em;
 }
 
 .zz-maincont h2 {
-    color: red;
-    width: 160px;
+    /* make it inline? So content is always to the right? */
+    /* Add rule line on right side */
+    position: relative;
+    display: inline-block;
+    /* width: 100px;  */
+    /* text-align: right; */
+    text-align: center;
+    color: var(--complement-semidark);
+    font-size: 1.5em;
+    padding-right: .5em;
+    color: var(--complement-semidark);
+    /* width: 160px; */
 }
 
 .zz-cards, .zz-cardfigcont {
@@ -167,6 +164,18 @@ really needs work in this regard. */
 }
 
 @media screen and (min-width: 560px) {
+    .zz-maincont h2 {
+        text-align: right;
+        width: 160px;
+    }
+
+    .zz-maincont, .zz-cardcontainer {
+        justify-content: center;
+    }
+    .zz-maincont:first-child {   
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
 }
 
 @media screen and (min-width: 650px) {
@@ -181,18 +190,17 @@ really needs work in this regard. */
     .zz-maincont{
         flex-direction: row;
     }
-
 }
 
 @media screen and (min-width: 768px) {
     /* Tablet sized screens */
-    .card-container {
+    /* .card-container {
       flex: 0 0 100%;
       max-width: 100%;
     }
-  
+   */
         /* First project card gets the entire width of the flex box */
-    .card-container:first-child, .zz-cardfigcont:first-child {   
+    .zz-cardfigcont:first-child {   
         flex: 0 0 100%;
         max-width: 100%;
     }
@@ -200,10 +208,10 @@ really needs work in this regard. */
   
   /* Larger screens */
   @media screen and (min-width: 992px) {
-    .card-container {
+    /* .card-container {
       flex: 0 0 50%;
       max-width: 50%;
-    }
+    } */
   }
 
 
