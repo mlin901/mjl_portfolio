@@ -20,10 +20,16 @@
     font-family: Helvetica, Arial, sans-serif;;
 }
 
-/* PAGE-WIDE STYLES */
-:link, :visited {
+/* LINKS */
+
+header :link, header :visited {
     color: var(--ltgreen);
 }
+
+#contact :link, #contact :visited {
+    color: var(--dkblue);
+}
+
 
 /* HEADER STYLES */
 /* For name in upper left */
@@ -54,7 +60,7 @@ h1 {
 nav ul {
     padding-top: 4rem;
     padding-left: 0;
-    padding-right: 0;
+    padding-right: 30px;
     text-align: center;
 }
 
@@ -86,11 +92,15 @@ main {
     margin-right: 1em;
 }
 
-.maincontent, .zz-cardcontainer {
+.maincontent, .cardcontainer {
     display: flex;
     justify-content: flex-start;
     flex-wrap: wrap;
 }
+
+ .cardcontainer {
+    max-width: 800px;
+} 
 
 .maincontent {
     padding-top: 1.5em;
@@ -105,50 +115,41 @@ main {
     color: var(--complement-semidark);
     font-size: 1.5em;
     padding-right: .5em;
-    color: var(--complement-semidark);
 }
 
-.zz-cards {
+/* FLexbox items */
+.cardfig, .textcont, .cards {
     flex: 1 0 368px; /* +++++++++++++++++++++++++++++++*/
     line-height: 1.5;
 }
 
-.zz-cardfig {
-    flex: 1 0 368px; /* +++++++++++++++++++++++++++++++*/
-    line-height: 1.5;
-}
-
-.zz-textcont {
-    flex: 1 0 368px; /* +++++++++++++++++++++++++++++++*/
-    line-height: 1.5;
-}
-
-.zz-textcont p {
+.textcont p {
+    padding-left: 1em; 
     margin-bottom: .4em;
 }
 
-.zz-cardfig {   
+.cardfig {   
     padding: 0 0 0 1rem;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     min-height: 100%;
     color: var(--complement-semilight);
-    /* Remove the following--though I'm not sure about "transition"**** */
-    /* outline is like border, but on the outside of the box instead of inside */
-    outline: 2px dashed var(--complement-light);
-    outline-offset: -2px;
-    transition: all 0.5s ease-in-out;
-    max-width: 400px; /* ??????????????/<---------- */
+    max-width: 400px; 
+}
+
+.cardfig img {
+    max-width: 100%;
 }
 
 .cardinset {    
     position: relative;
-    margin: -4rem 0 1.5rem 0; /* ???????????? */
-    padding: 0.5rem 1rem; /* ???????????? */
+    top: -1em;
+    margin: -5rem 0 1.5rem 0; 
+    padding: 0.5rem 1rem; 
     background-color: var(--medblue);
     color: var(--ltgreen);
-    width: 12rem;
+    width: 16rem;
 }
 
 #contact {
@@ -168,9 +169,8 @@ main {
 
 /* FOOTER */
 footer {
-    position: relative;
     left: 12%;
-    margin: 50px 0;
+    text-align: center;
     padding-bottom: 30px;
 }
 
@@ -180,11 +180,11 @@ though, that's the default given this min-width scheme, so I
 should just adjust the main settings. The header area 
 really needs work in this regard. */
 
-
 @media screen and (min-width: 560px) {
     p#subtitle {
         text-align: right;
-        padding-right: 4em;
+        padding-right: 30px;
+        color: var(--medblue);
     }
 
     nav {
@@ -197,10 +197,10 @@ really needs work in this regard. */
         margin: 5px 10px 0px 10px;    
     }
 
-    nav ul {
+    /* nav ul {
         padding-left: 4rem;
         padding-right: 2em;
-    }
+    } */
     
     .maincontent h2 {
         text-align: right;
@@ -214,7 +214,7 @@ really needs work in this regard. */
 }
 
 @media screen and (min-width: 650px) {
-    #cards {
+    .cards, .textcont, #contactlinks {
         border-left: 5px solid var(--compliment-dark);
     }
 
@@ -225,13 +225,13 @@ really needs work in this regard. */
 
 @media screen and (min-width: 768px) {
     /* First project card gets the entire width of the flex box */
-    /* .zz-cardfig:first-child {    */
+    /* .cardfig:first-child {    */
         #firstitem {
         flex: 0 0 100%;
         max-width: 800px;   /* +++++++++++ */
     }
+    
   }
-  
 
   /* Larger screens */
   @media screen and (min-width: 992px) {
