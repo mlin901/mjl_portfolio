@@ -4,9 +4,11 @@ This assignment was to create a web-based portfolio to "showcase...skills and ta
 
 As predicted in the README.md for this assignment, I do not have enough web applications to showcase at this point, so the portfolio has a couple of placholders for future projects, and the projects that it does showcase will be replaced in the future by more substantial and compelling full-stack web projects. 
 
-Published website: **************
+Links:
 
-Picture of website: ************* 
+* [Published website](https://mlin901.github.io/mjl_portfolio/)
+
+* [Picture of website](./assets/images/_Users_matt_jane_Documents_Matt_UcDavisBootcamp_homework_02-Advanced-CSS_mjl_portfolio_index.html.png)
 
 ## Known issues
 
