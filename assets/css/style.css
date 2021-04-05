@@ -143,6 +143,10 @@ main {
     max-width: 100%;
 }
 
+.cardfig img:hover {
+    border: 3px solid var(--complement-semilight);
+  }
+
 .cardinset {    
     position: relative;
     top: -1em;
