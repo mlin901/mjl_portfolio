@@ -31,8 +31,7 @@ header :link, header :visited {
 }
 
 
-/* HEADER STYLES */
-/* For name in upper left */
+/* HEADER */
 header {
     display: flex;
     justify-content: space-between;
@@ -42,12 +41,8 @@ header {
     padding-bottom: 1.5em;
 }
 
-nav {
-    margin: auto;
-}
-
+    /* For name in upper left */
 h1 {
-    /* display: inline; */
     font-size: 2rem;
     color: var(--medblue);
     background-color: var(--ltgreen);
@@ -57,6 +52,11 @@ h1 {
     margin: auto;
 }
 
+    /* For TOC links in header */
+nav {
+    margin: auto;
+}
+    
 nav ul {
     padding-top: 4rem;
     padding-left: 0;
@@ -70,7 +70,7 @@ nav ul li {
     padding-left: 1em;
 }
 
-/* SUBTITLE SECTION STYLES */
+/* SUBTITLE SECTION */
 #subtitlearea {
     height: 8em;
     background-color: var(--ltgreen);
@@ -87,14 +87,13 @@ p#subtitle {
 }
 
 
-
-
-/* MAIN STYLES */
+/* MAIN */
 
 main {
     margin-right: 1em;
 }
 
+    /* Flexbox containers */
 .maincontent, .cardcontainer {
     display: flex;
     justify-content: flex-start;
@@ -110,8 +109,7 @@ main {
 }
 
 .maincontent h2 {
-    /* make it inline? So content is always to the right? */
-    /* Add rule line on right side */
+
     position: relative;
     display: inline-block;
     text-align: center;
@@ -150,8 +148,6 @@ main {
     top: -1em;
     margin: -5rem 0 1.5rem 0; 
     padding: 0.5rem 1rem; 
-    /* color: var(--medblue);
-    background-color: var(--ltgreen); */
     background-color: var(--medblue);
     color: var(--ltgreen);
     width: 16rem;
@@ -177,13 +173,12 @@ footer {
     left: 12%;
     text-align: center;
     padding-bottom: 30px;
+    padding-top: 20px;
+    font-size: .85em;
 }
 
-/* MEDIA QUERIES - adapted from class project 28-Stu-Mini-Project */
-/* TODO: smaller screens - i.e., phones? Really, 
-though, that's the default given this min-width scheme, so I 
-should just adjust the main settings. The header area 
-really needs work in this regard. */
+/* MEDIA QUERIES - some of this adapted from class project 
+   28-Stu-Mini-Project */
 
 @media screen and (min-width: 560px) {
     p#subtitle {
@@ -213,29 +208,29 @@ really needs work in this regard. */
         max-width: 100%;
     }
 
-#subtitlearea figure {
-    display: inline-block;
-    background-image: url("../../assets/images/Matt_pict2.png");
-    margin: 5px 0px 5px 10px;
-    background-size: 100%;
-    height: 118px;
-    width: 98px;
-  }
-  
-  #subtitlearea img {
-    width: 100%;
-    height: auto;
-    width: 95px;
-  }
+    #subtitlearea figure {
+        display: inline-block;
+        background-image: url("../../assets/images/Matt_pict2.png");
+        margin: 5px 0px 5px 10px;
+        background-size: 100%;
+        height: 118px;
+        width: 98px;
+    }
+    
+    #subtitlearea img {
+        width: 100%;
+        height: auto;
+        width: 95px;
+    }
 
-  #subtitlecontainer {
-      display: inline-block;
-      position: relative;
-      top: -1.75em;
-      width: 100%;
-  }
+    #subtitlecontainer {
+        display: inline-block;
+        position: relative;
+        top: -1.75em;
+        width: 100%;
+    }
 
-}
+    }
 
 @media screen and (min-width: 650px) {
     .cards, .textcont, #contactlinks {
