@@ -244,7 +244,6 @@ footer {
 
 @media screen and (min-width: 768px) {
     /* First project card gets the entire width of the flex box */
-    /* .cardfig:first-child {    */
         #firstitem {
         flex: 0 0 100%;
         max-width: 800px; 
