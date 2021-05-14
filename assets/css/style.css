@@ -2,9 +2,12 @@
 /* From two color schemes found in https://coolors.co/palettes/trending */
 :root {
     --dkblue: #01161E;
-    --medblue: #124559;
+    --medblue: #003554;
+    /* --medblue: #124559; */
     --ltblue: #598392;
-    --ltgreen: #AEC3B0;
+    /* --ltgreen: #AEC3B0; */
+    /* --ltgreen: #faf3dd; */
+    --ltgreen: #fffff9;
     --offwhite: #EFF6E0;
     --compliment-dark: #220901;
     --complement-semidark: #621708;
@@ -22,14 +25,24 @@
 
 /* LINKS */
 
+a {
+    text-decoration: none;
+}
+
 header :link, header :visited {
     color: var(--ltgreen);
 }
 
 #contact :link, #contact :visited {
-    color: var(--dkblue);
+    /* color: var(--dkblue); */
+    /* color: #2C7DA0; */
+    color: var(--ltgreen);
 }
 
+body {
+    background-color: var(--ltgreen);
+    color: var(--medblue);
+}
 
 /* HEADER */
 header {
@@ -44,8 +57,9 @@ header {
     /* For name in upper left */
 h1 {
     font-size: 2rem;
-    color: var(--medblue);
-    background-color: var(--ltgreen);
+    color: var(--ltgreen);
+    /* color: var(--medblue); */
+    /* background-color: var(--ltgreen); */
     padding: .4rem 0 .4rem 0;
     width: 9.75em;
     text-align: center;
@@ -62,6 +76,8 @@ nav ul {
     padding-left: 0;
     padding-right: 30px;
     text-align: center;
+
+padding-bottom: 15px;
 }
 
 nav ul li {
@@ -72,8 +88,11 @@ nav ul li {
 
 /* SUBTITLE SECTION */
 #subtitlearea {
-    height: 8em;
-    background-color: var(--ltgreen);
+    height: 7em;
+    /* background-color: var(--ltgreen); */
+    background-color: #2C7DA0;
+    color: var(--ltgreen);
+    text-align:center;
 }
 
 p#subtitle {
@@ -113,7 +132,8 @@ main {
     position: relative;
     display: inline-block;
     text-align: center;
-    color: var(--complement-semidark);
+    /* color: var(--complement-semidark); */
+    color: var(--medblue);
     font-size: 1.5em;
     padding-right: .5em;
 }
@@ -127,6 +147,7 @@ main {
 .textcont p {
     padding-left: 1em; 
     margin-bottom: .4em;
+    line-height: 1.4;
 }
 
 .cardfig {   
@@ -152,18 +173,22 @@ main {
     top: -1em;
     margin: -5rem 0 1.5rem 0; 
     padding: 0.5rem 1rem; 
-    background-color: var(--medblue);
+    /* background-color: var(--medblue); */
+    /* background-color: #00a6fb; */
+    background-color: #2C7DA0;
     color: var(--ltgreen);
+    /* color: white; */
     width: 16rem;
 }
 
 #contact {
     padding-bottom: 1em;
+    background-color: #2C7DA0; 
 }
 
 #contact ul {
     position: relative;
-    left: 12%;
+    left: 15px;
 }
 
 #contact ul li {
@@ -179,6 +204,8 @@ footer {
     padding-bottom: 30px;
     padding-top: 20px;
     font-size: .85em;
+    background-color: var(--medblue); 
+    color: var(--ltgreen);
 }
 
 /* MEDIA QUERIES - some of this adapted from class project 
@@ -186,20 +213,29 @@ footer {
 
 @media screen and (min-width: 560px) {
     p#subtitle {
-        text-align: right;
-        padding-right: 30px;
-        color: var(--medblue);
-        margin-top: -30px;
+        /* text-align: right; */
+        /* padding-right: 30px; */
+        /* color: var(--medblue); */
+        color: var(--ltgreen);
+        /* margin-top: -30px; */
+
+text-align: left;
+padding-left: 175px;
+margin-top: -30px;
+padding-top: 10px;
     }
 
     nav {
-        margin: revert;
+        /* margin: revert; */
+        margin:auto;
     }
 
     h1 {
         text-align: unset;
-        padding: .4rem .4rem .4rem 4rem;
-        margin: 5px 10px 0px 10px;    
+        /* padding: .4rem .4rem .4rem 4rem;
+        margin: 5px 10px 0px 10px;     */
+    padding: .4rem .4rem 0rem 4rem;
+    margin: 45px 10px 0px 110px;
     }
     
     .maincontent h2 {
@@ -212,14 +248,17 @@ footer {
         max-width: 100%;
     }
 
-    #subtitlearea figure {
+    /* #subtitlearea > figure {
         display: inline-block;
         background-image: url("../../assets/images/Matt_pict2.png");
         margin: 5px 0px 5px 10px;
         background-size: 100%;
         height: 118px;
         width: 98px;
-    }
+        position: absolute; /* *******/
+        top: 50px; /* *******/
+        left: 40px; /* *******/
+    } */
     
     #subtitlearea img {
         width: 100%;
@@ -237,13 +276,13 @@ footer {
     }
 
 @media screen and (min-width: 650px) {
-    .cards, .textcont, #contactlinks {
+    /* .cards, .textcont, #contactlinks {
         border-left: 5px solid var(--compliment-dark);
-    }
-
+    } */
+    
     .maincontent{
         flex-direction: row;
-    }
+    }   
 }
 
 @media screen and (min-width: 768px) {
@@ -253,4 +292,16 @@ footer {
         max-width: 800px; 
     }
     
+    #subtitlearea > figure {
+        display: inline-block;
+        background-image: url("../../assets/images/Matt_pict2.png");
+        margin: 5px 0px 5px 10px;
+        background-size: 100%;
+        height: 118px;
+        width: 98px;
+        position: absolute; /* *******/
+        top: 50px; /* *******/
+        left: 40px; /* *******/
+    }
+
   }
