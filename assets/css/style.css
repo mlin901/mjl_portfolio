@@ -1,14 +1,9 @@
 /* VARIABLES */
-/* From two color schemes found in https://coolors.co/palettes/trending */
 :root {
     --dkblue: #01161E;
     --medblue: #003554;
-    /* --medblue: #124559; */
     --ltblue: #598392;
-    /* --ltgreen: #AEC3B0; */
-    /* --ltgreen: #faf3dd; */
-    --ltgreen: #fffff9;
-    --offwhite: #EFF6E0;
+    --offwhite: #fffff9;
     --compliment-dark: #220901;
     --complement-semidark: #621708;
     --complement-med: #941B0C;
@@ -16,14 +11,20 @@
     --complement-light: #F6AA1C;
 }
 
-/* UNIVERSAL SELECTOR */
-/* TODO: solidify font-family, add other basic settings? 
-         Maybe different font for headings? */
+
+/* UNIVERSAL SELECTOR & BASIC STYLES*/
+
 * {
     font-family: Helvetica, Arial, sans-serif;;
 }
 
-/* LINKS */
+body {
+    background-color: var(--offwhite);
+    color: var(--medblue);
+}
+
+
+/* BASIC LINK STYLES */
 
 a {
     text-decoration: none;
@@ -34,25 +35,11 @@ a:hover {
 }
 
 a:visited {
-    color: var(--ltgreen);
+    color: var(--offwhite);
 }
 
-header :link, header :visited {
-    color: var(--ltgreen);
-}
 
-#contact :link, #contact :visited {
-    /* color: var(--dkblue); */
-    /* color: #2C7DA0; */
-    color: var(--ltgreen);
-}
-
-body {
-    background-color: var(--ltgreen);
-    color: var(--medblue);
-}
-
-/* HEADER */
+/* HEADER AREA */
 header {
     display: flex;
     justify-content: space-between;
@@ -65,9 +52,7 @@ header {
     /* For name in upper left */
 h1 {
     font-size: 2rem;
-    color: var(--ltgreen);
-    /* color: var(--medblue); */
-    /* background-color: var(--ltgreen); */
+    color: var(--offwhite);
     padding: .4rem 0 .4rem 0;
     width: 9.75em;
     text-align: center;
@@ -75,6 +60,11 @@ h1 {
 }
 
     /* For TOC links in header */
+
+header :link, header :visited {
+    color: var(--offwhite);
+}
+
 nav {
     margin: auto;
 }
@@ -84,12 +74,11 @@ nav ul {
     padding-left: 0;
     padding-right: 30px;
     text-align: center;
-
-padding-bottom: 15px;
+    padding-bottom: 15px;
 }
 
 nav ul li {
-    color: var(--ltgreen);
+    color: var(--offwhite);
     display: inline;
     padding-left: 1em;
 }
@@ -97,19 +86,13 @@ nav ul li {
 /* SUBTITLE SECTION */
 #subtitlearea {
     height: 7em;
-    /* background-color: var(--ltgreen); */
     background-color: #2C7DA0;
-    color: var(--ltgreen);
+    color: var(--offwhite);
     text-align:center;
 }
 
 p#subtitle {
     /* For subtitle in big graphic section */
-    /* position: relative;
-    top: 1em;
-    text-align: center;
-    padding-right: 0;
-    padding-top: 3em; */
     font-size: 1.5em;
 }
 
@@ -139,17 +122,16 @@ main {
     position: relative;
     display: inline-block;
     text-align: center;
-    /* color: var(--complement-semidark); */
     color: var(--medblue);
     font-size: 1.5em;
     padding-right: .5em;
 }
 
 #contact > h2 {
-    color: var(--ltgreen);
+    color: var(--offwhite);
 }
 
-/* FLexbox items */
+    /* FLexbox items */
 .cardfig, .textcont, .cards {
     flex: 1 0 368px; 
     line-height: 1.5;
@@ -184,18 +166,20 @@ main {
     top: -1.5em;
     margin: -5rem 0 1.5rem 0; 
     padding: 0.5rem 1rem; 
-    /* background-color: var(--medblue); */
-    /* background-color: #00a6fb; */
     background-color: #2C7DA0;
-    /* color: var(--ltgreen); */
     color: white;
     width: 17rem;
     font-size: .9em;
 }
 
+    /* Contact area */
 #contact {
     padding-bottom: 1em;
     background-color: #2C7DA0; 
+}
+
+#contact :link, #contact :visited {
+    color: var(--offwhite);
 }
 
 #contact ul {
@@ -218,7 +202,7 @@ footer {
     padding-top: 20px;
     font-size: .85em;
     background-color: var(--medblue); 
-    color: var(--ltgreen);
+    color: var(--offwhite);
 }
 
 /* MEDIA QUERIES - some of this adapted from class project 
@@ -226,73 +210,42 @@ footer {
 
 @media screen and (min-width: 560px) {
     p#subtitle {
-        /* text-align: right; */
-        /* padding-right: 30px; */
-        /* color: var(--medblue); */
-        color: var(--ltgreen);
-        /* margin-top: -30px; */
-
-text-align: left;
-padding-left: 175px;
-margin-top: -30px;
-padding-top: 10px;
+        color: var(--offwhite);
+        text-align: left;
+        padding-left: 175px;
+        margin-top: -30px;
+        padding-top: 10px;
     }
-
     nav {
-        /* margin: revert; */
         margin:auto;
     }
-
     h1 {
         text-align: unset;
-        /* padding: .4rem .4rem .4rem 4rem;
-        margin: 5px 10px 0px 10px;     */
-    padding: .4rem .4rem 0rem 4rem;
-    margin: 45px 10px 0px 110px;
+        padding: .4rem .4rem 0rem 4rem;
+        margin: 45px 10px 0px 110px;
     }
-    
     .maincontent h2 {
         text-align: right;
         width: 160px;
     }
-
     .manincontent:first-child {   
         flex: 0 0 100%;
         max-width: 100%;
     }
-
-    /* #subtitlearea > figure {
-        display: inline-block;
-        background-image: url("../../assets/images/Matt_pict2.png");
-        margin: 5px 0px 5px 10px;
-        background-size: 100%;
-        height: 118px;
-        width: 98px;
-        position: absolute; /* *******/
-        top: 50px; /* *******/
-        left: 40px; /* *******/
-    } */
-    
     #subtitlearea img {
         width: 100%;
         height: auto;
         width: 95px;
     }
-
     #subtitlecontainer {
         display: inline-block;
         position: relative;
         top: -1.75em;
         width: 100%;
     }
-
-    }
+}
 
 @media screen and (min-width: 650px) {
-    /* .cards, .textcont, #contactlinks {
-        border-left: 5px solid var(--compliment-dark);
-    } */
-    
     .maincontent{
         flex-direction: row;
     }   
@@ -304,7 +257,6 @@ padding-top: 10px;
         flex: 0 0 100%;
         max-width: 800px; 
     }
-    
     #subtitlearea > figure {
         display: inline-block;
         background-image: url("../../assets/images/Matt_pict2.png");
@@ -312,9 +264,8 @@ padding-top: 10px;
         background-size: 100%;
         height: 118px;
         width: 98px;
-        position: absolute; /* *******/
-        top: 50px; /* *******/
-        left: 40px; /* *******/
+        position: absolute; 
+        top: 50px; 
+        left: 40px; 
     }
-
-  }
+}
