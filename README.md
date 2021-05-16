@@ -15,7 +15,3 @@ I still do not have enough web applications to showcase at this point, so the po
 ## Screenshot of current state of portfolio (published in GitHub Pages)
 
 ![Screen Capture](./assets/images/mjl_portfolio2.png)
-
-## Screenshot of first version of portfolio (published in GitHub Pages)
-
-![Screen Capture](./assets/images/mjl_portfolio.png)
