@@ -29,6 +29,14 @@ a {
     text-decoration: none;
 }
 
+a:hover {
+    color: var(--complement-semidark);
+}
+
+a:visited {
+    color: var(--ltgreen);
+}
+
 header :link, header :visited {
     color: var(--ltgreen);
 }
@@ -170,7 +178,7 @@ main {
 
 .cardinset {    
     position: relative;
-    top: -1em;
+    top: -1.5em;
     margin: -5rem 0 1.5rem 0; 
     padding: 0.5rem 1rem; 
     /* background-color: var(--medblue); */
@@ -178,7 +186,8 @@ main {
     background-color: #2C7DA0;
     color: var(--ltgreen);
     /* color: white; */
-    width: 16rem;
+    width: 17rem;
+    font-size: .9em;
 }
 
 #contact {
