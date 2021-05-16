@@ -136,7 +136,6 @@ main {
 }
 
 .maincontent h2 {
-
     position: relative;
     display: inline-block;
     text-align: center;
@@ -144,6 +143,10 @@ main {
     color: var(--medblue);
     font-size: 1.5em;
     padding-right: .5em;
+}
+
+#contact > h2 {
+    color: var(--ltgreen);
 }
 
 /* FLexbox items */
@@ -184,8 +187,8 @@ main {
     /* background-color: var(--medblue); */
     /* background-color: #00a6fb; */
     background-color: #2C7DA0;
-    color: var(--ltgreen);
-    /* color: white; */
+    /* color: var(--ltgreen); */
+    color: white;
     width: 17rem;
     font-size: .9em;
 }
@@ -197,7 +200,8 @@ main {
 
 #contact ul {
     position: relative;
-    left: 15px;
+    left: 19px;
+    padding-top: 3px;
 }
 
 #contact ul li {
