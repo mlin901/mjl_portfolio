@@ -37,7 +37,14 @@
         <section class="maincontent" id="aboutme">
             <h2>About<br>me</h2>
             <div class="textcont">
-                <p>Web Developer with experience in all phases of software product development, from requirements and coding to quality assurance testing and post-implementation support. Full Stack Web Development certification from the University of California, Davis (anticipated August, 2021), with expertise in JavaScript, jQuery, Node.js and more. Team player focused on collaborative success, with excellent written and verbal communication skills. Valued for developing robust solutions that bring lasting value through optimized processes. Over twenty years of experience in transforming labor-intensive manual workflows into automated, scripted processes that improve customer outcomes.</p>
+                <p>Web Developer with experience in all phases of software product development, from requirements 
+                    and coding to quality assurance testing and post-implementation support. Full Stack Web 
+                    Development certificate from the University of California, Davis, 
+                    with expertise in JavaScript, jQuery, Node.js, Sequelize.js, Express.js, Handelbars, and more.
+                    Team player focused on collaborative success, with excellent written and verbal communication 
+                    skills. Valued for developing robust solutions that bring lasting value through optimized 
+                    processes. Over twenty years of experience in transforming labor-intensive manual workflows into
+                    automated, scripted processes that improve customer outcomes.</p>
             </div>
         </section>
 
@@ -48,7 +55,8 @@
             <div class="cards">
 
                 <div class="cardcontainer">
-                    <figure class="cardfig" id="firstitem">
+
+                    <!-- <figure class="cardfig" id="firstitem">
                         <a href="https://mlin901.github.io/mjl-weatherDashboard/">
                             <img src="assets/images/weatherAppScreenshot.png" alt="Weather Dashboard app" />
                         </a>
@@ -57,45 +65,186 @@
                             <p>3P APIs, Bootstrap, JQuery</p>
                             <p><a href="https://github.com/mlin901/mjl-weatherDashboard">➤&#8239;&#8239;GitHub repo</a>&nbsp;&nbsp;<a href="https://mlin901.github.io/mjl-weatherDashboard/">➤&#8239;&#8239;Published site</a></p>
                         </div>
-                    </figure>
+                    </figure> -->
+
                     <figure class="cardfig">
-                        <a href="https://github.com/mlin901/Marvelizer">
+                        <div class="img__wrap">
+                            <!-- <a href="https://github.com/mlin901/Marvelizer"> -->
                             <img src="assets/images/Marvelizer2.jpg" alt="The Marvelizer web app">
-                        </a>    
-                        <div class="cardinset">
-                            <h3>The Marvelizer</h3>
-                            <p>3P APIs, JQuery, Foundation</p>
-                            <p><a href="https://github.com/mlin901/Marvelizer">➤&#8239;&#8239;GitHub repo</a>&nbsp;&nbsp;<a href="https://zoneam.github.io/Marvelizer/">➤&#8239;&#8239;Published site</a></p>
+                            <!-- </a>     -->
+                            <div class="img__description_layer">
+                                <p class="img__description"> <span class="proj_title">The MARVELizer</span> is a web 
+                                    app that enables you to search for a Marvel character, view information and 
+                                    Giphys related to the character, and save favorite Giphys. The search feature 
+                                    queries the Marvel API for a character’s description and a thumbnail, and it 
+                                    uses the character name to query the Giphy API for the Giphys related to the 
+                                    character. 
+                                    <br>
+                                    This application utilizes <b>Foundation</b>, <b>APIs</b> (Marvel and Giphy),
+                                    <b>JQuery</b>, <b>JavaScript</b>, and <b>local storage</b>.
+                                    <br> <br>
+                                    <a class="proj_links" href="https://github.com/mlin901/Marvelizer"> 
+                                        ➤&nbsp;&nbsp;GitHub repo
+                                    </a>
+                                    <br>
+                                    <a class="proj_links" href="https://zoneam.github.io/Marvelizer/"> 
+                                        ➤&nbsp;&nbsp;Published site
+                                    </a>
+                                </p>
+                            </div>
+                            <div class="cardinset">
+                                <h3>The MARVELizer:<br>Giphys for Marvel characters</h3>
+                                <p>Hover for details</p>
+                            </div>
                         </div>
                     </figure>
+
                     <figure class="cardfig">
-                        <a href="https://github.com/mlin901/mjl-calendarApp">
+                            <div class="img__wrap">
+                                <img class="img__img" src="./assets/images/carboLoader.jpg" alt="Project placeholder" />
+                                <div class="img__description_layer">
+                                    <p class="img__description"> <span class="proj_title">Carbo-Loader</span> enables users to track carbohydrates for their meals. The Nutritionix API node 
+                                        module is used to search and capture carbohydrate and fiber content, and users can also search for specific quantities.
+                                        The search results can be added to a user's current meal and a carbohydrate total for the entire meal is tallied. 
+                                        Individual foods can be marked as a favorite for easy retrieval later and meals can be saved for future reference. 
+                                        <br>
+                                        This application utilizes <b>Node.js</b>, a <b>MySQL</b> database, <b>Express</b> server, <b>Handlebars</b>, <b>Sequelize</b> ORM, <b>Express Session</b> 
+                                        middleware for cookies, and <b>bcrypt</b> for password protection. 
+                                        <br>
+                                        <a class="proj_links" href="https://github.com/mlin901/carb_counter"> 
+                                            ➤&nbsp;&nbsp;GitHub repo
+                                        </a>
+                                        <br>
+                                        <a class="proj_links" href="https://infinite-stream-14480.herokuapp.com/"> 
+                                            ➤&nbsp;&nbsp;Published site
+                                        </a>
+                                    </p>
+                                </div>
+                            </div>
+                        <div class="cardinset">
+                            <h3>Carbo-Loader:<br>Caculate carbs for meals</h3>
+                            <p>Hover for details</p>
+                        </div>
+                    </figure>
+
+                    <figure class="cardfig">
+                        <div class="img__wrap">
+                        <!-- <a href="https://mlin901.github.io/mjl-weatherDashboard/"> -->
+                        <img src="assets/images/techBlog.jpg" alt="Weather Dashboard app" />
+                        <!-- </a> -->
+                        <div class="img__description_layer">
+                            <p class="img__description"> <span class="proj_title">The Tech Blog</span> is a
+                                blog site that enables you to view blog posts, and if you're logged in, it 
+                                enables you to add, edit, delete, and comment on blog posts. 
+                                <br>
+                                This app follows the MVC paradigm and uses the following technologies:
+
+                                <b>Node.js</b>, the <b>dotenv</b> npm package, <b>Handlebars.js</b>, <b>Express.js</b>, 
+                                the <b>express-session</b> npm package, <b>Heroku</b>, <b>Sequelize.js</b>, the 
+                                <b>bcrypt</b> npm package, and the <b>connect-session-sequelize</b> npm package.
+
+                                <br> <br>
+                                <a class="proj_links" href="https://github.com/mlin901/theDopeOnDev"> 
+                                    ➤&nbsp;&nbsp;GitHub repo
+                                </a>
+                                <br>
+                                <a class="proj_links" href="https://secure-ridge-69918.herokuapp.com/"> 
+                                    ➤&nbsp;&nbsp;Published site
+                                </a>
+                            </p>
+                        </div>
+                        <div class="cardinset">
+                            <h3>The Tech Blog:<br> The real scoop on tech</h3>
+                            <p>Hover for details</p>
+                        </div>
+                    </figure>
+
+                    <figure class="cardfig">
+                        <div class="img__wrap">
+                            <!-- <a href="https://mlin901.github.io/mjl-weatherDashboard/"> -->
+                            <img src="assets/images/weatherAppScreenshot.png" alt="Weather Dashboard app" />
+                            <!-- </a> -->
+                            <div class="img__description_layer">
+                                <p class="img__description"> <span class="proj_title">Weather Dashbard</span> is a web 
+                                    app that uses the OpenWeather API to retrieve weather data for cities.
+                                    When user enters a city name and clicks Go, the dashbard app uses the 
+                                    city name for two API searches, populates data area (upper right) with 
+                                    city info, populates the forcast area (lower right) with forcast information 
+                                    for the next five days, saves name of the city to local storage and retrieves
+                                    saved city names when the page is opened or refreshed, and adds the city name
+                                    to a list that can be used for future searches. 
+                                    <br> <br>
+                                    <a class="proj_links" href="https://github.com/mlin901/mjl-weatherDashboard"> 
+                                        ➤&nbsp;&nbsp;GitHub repo
+                                    </a>
+                                    <br>
+                                    <a class="proj_links" href="https://mlin901.github.io/mjl-weatherDashboard/"> 
+                                        ➤&nbsp;&nbsp;Published site
+                                    </a>
+                                </p>
+                            </div>
+                            <div class="cardinset">
+                                <h3>Weather Dashboard:<br>Retrieve weather data for cities</h3>
+                                <p>Hover for details</p>
+                            </div>
+                        </div>
+                    </figure>
+
+
+                    <figure class="cardfig">
+                        <div class="img__wrap">
+                            <!-- <a href="https://github.com/mlin901/mjl-calendarApp"> -->
                             <img src="./assets/images/CalendarAppScreenCap.jpg" alt="Calendar App" />
-                        </a>
-                        <div class="cardinset">
-                            <h3>Calendar App</h3>
-                            <p>Bootstrap, Moment.js, Font Awsome</p>
-                            <p><a href="https://github.com/mlin901/mjl-calendarApp">&#8239;&#8239;➤&#8239;&#8239;GitHub repo</a>&nbsp;&nbsp;<a href="https://mlin901.github.io/mjl-calendarApp/">➤&#8239;&#8239;Published site</a></p>
+                            <!-- </a> -->
+                            <div class="img__description_layer">
+                                <p class="img__description"> <span class="proj_title">Work Day Scheduler</span> is a calendar app that associates 
+                                    tasks with timeblocks in the day. Tasks are saved to local storage, and when the app is opened or refreshed,
+                                    tasks are retrieved from local storage and displayed in their associated timeblocks.
+                                    <br>
+                                    This application is built with the following: <b>Moment.js</b>, <b>Bootstrap</b>, <b>Font Awsome</b>, 
+                                    <b>JavaScript</b>, and <b>JQuery</b>. 
+                                    <br> <br>
+                                    <a class="proj_links" href="https://github.com/mlin901/mjl-calendarApp"> 
+                                        ➤&nbsp;&nbsp;GitHub repo
+                                    </a>
+                                    <br>
+                                    <a class="proj_links" href="https://mlin901.github.io/mjl-calendarApp/"> 
+                                        ➤&nbsp;&nbsp;Published site
+                                    </a>
+                                </p>
+                            </div>
+                            <div class="cardinset">
+                                <h3>Work Day Scheduler:<br>Schedule the day's tasks</h3>
+                                <p>Hover for details</p>
+                            </div>
                         </div>
                     </figure>
+
                     <figure class="cardfig">
-                        <a href="#">
+                        <div class="img__wrap">
+                            <!-- <a href="#"> -->
                             <img src="./assets/images/sdedoc.jpg" alt="Synergy/DE online documentation" />
-                        </a>
-                        <div class="cardinset">
-                            <h3>Synergy/DE Documentation</h3>
-                            <p>Flare, JavaScript, JQuery</p>
-                            <p><a href="https://www.synergex.com/docs/">➤&#8239;&#8239;Published site</a></p>
-                        </div>
-                    </figure>
-                    <figure class="cardfig">
-                        <a href="#">
-                        <img src="./assets/images/pankaj-patel-_SgRNwAVNKw-unsplash.jpg" alt="Project placeholder" />
-                        </a>
-                        <div class="cardinset">
-                            <h3>Project placeholder</h3>
-                            <p>Placeholder text</p>
-                            <p>&nbsp;</p>
+                            <!-- </a> -->
+                            <div class="img__description_layer">
+                                <p class="img__description"> <span class="proj_title">Synergy/DE documentation</span> is the documentation
+                                    for Synergy DBL, which is the modern version of the DIBOL language. It includes various development tools.
+                                     This documentation is created with 
+                                    <b>MadCap Flare</b>, <b>JavaScript</b>, <b>JQuery</b>, and <b>C#</b> post-build processing programs. 
+                                    <br> <br>
+                                    <a class="proj_links" href="https://www.synergex.com/docs/"> 
+                                        ➤&nbsp;&nbsp;Published site
+                                    </a>
+                                </p>
+                            </div>
+                            <!-- <div class="cardinset">
+                                <h3>Synergy/DE Documentation</h3>
+                                <p>Flare, JavaScript, JQuery</p>
+                                <p><a href="https://www.synergex.com/docs/">➤&#8239;&#8239;Published site</a></p>
+                            </div> -->
+                            <div class="cardinset">
+                                <h3>Synergy/DE Documentation:<br>Documentation DBL language</h3>
+                                <p>Hover for details</p>
+                            </div>
                         </div>
                     </figure>
                 </div>     

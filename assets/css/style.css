@@ -151,6 +151,7 @@ main {
     min-height: 100%;
     color: var(--complement-semilight);
     max-width: 400px; 
+    margin-bottom: 1.5rem;
 }
 
 .cardfig img {
@@ -164,9 +165,11 @@ main {
 .cardinset {    
     position: relative;
     top: -1.5em;
-    margin: -5rem 0 1.5rem 0; 
+    margin: -5rem 0 0 0; 
     padding: 0.5rem 1rem; 
-    background-color: #2C7DA0;
+    /* background-color: #2C7DA0; */
+    background: rgb(44, 125, 160, 0.9);
+
     color: white;
     width: 17rem;
     font-size: .9em;
@@ -269,3 +272,63 @@ footer {
         left: 40px; 
     }
 }
+
+
+/* ************************************* */
+
+/* relevant styles */
+.img__wrap {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .img__img {
+    vertical-align: bottom;
+  }
+  
+  .img__description_layer {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgb(44, 125, 160, 0.9);
+    color: #fff;
+    visibility: hidden;
+    opacity: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  
+    /* transition effect. not necessary */
+    /* transition: opacity .2s, visibility .2s; */
+    transition: opacity .25s, visibility 1s;
+
+  }
+  
+  .img__wrap:hover .img__description_layer {
+    visibility: visible;
+    opacity: 1;
+  }
+  
+  .img__description {
+    transition: .2s;
+    transform: translateY(1em);
+    /* text-align: center; */
+    vertical-align: text-top;
+    font-size: .75em;
+    margin: 10px;
+  }
+
+  .proj_links, .proj_title {
+      font-weight: bolder;
+      font-size: 1.15em;
+  }
+  
+  .img__wrap:hover .img__description {
+    transform: translateY(0);
+  }
+
+  .cardfig:hover .cardinset{
+    display : none;
+  }
